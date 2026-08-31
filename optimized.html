@@ -47,8 +47,7 @@
     .restart-btn{margin-top:20px;padding:10px 30px;background:#f00;color:#000;border:none;font-family:inherit;font-weight:bold;font-size:1.2rem;cursor:pointer;box-shadow:0 0 15px #f00}
     @media(max-width:768px){#mobile-controls,#fire-btn{display:block}.weapon-selector{transform:scale(0.85);transform-origin:bottom right;bottom:10px;right:10px}.hud-top{font-size:0.8rem;padding:10px}}
 </style>
-<script src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 <div id="loading"><h1>CARGANDO...</h1><p>Inicializando Grid Tron City...</p></div>
@@ -76,8 +75,7 @@
 <button id="fire-btn">FIRE</button>
 </div>
 <div id="game-over-panel"><div class="terminal-window"><div class="terminal-header"><span>SYSTEM FAILURE</span><span>ERR_CONNECTION_LOST</span></div><div class="terminal-body"><div class="go-title">CONNECTION LOST</div><div class="stat-row"><span>Final Score:</span><span class="stat-val" id="final-score">0</span></div><div class="stat-row"><span>Waves:</span><span class="stat-val" id="final-wave">0</span></div><div class="stat-row"><span>Purged:</span><span class="stat-val" id="final-kills">0</span></div><div class="rank-display" id="final-rank">RANK: JUNIOR DEV</div><button class="restart-btn" onclick="location.reload()">REBOOT SYSTEM</button></div></div></div>
-<script type="module">
-import * as THREE from 'three';
+<script>
 // === DETECCIÓN CROSS-PLATFORM CALIDAD MÁXIMA ===
 const isMobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||window.innerWidth<768;
 const isLowEnd=(navigator.hardwareConcurrency||4)<=4||(navigator.deviceMemory&&navigator.deviceMemory<=4);
